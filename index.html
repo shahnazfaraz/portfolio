@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shahnaz Faraz — Freelance Medical &amp; Dental Writer | Cedar Science Studio</title>
+<meta name="description" content="Cedar Science Studio: freelance medical and dental writing by a specialist pediatric dentist with 13+ years chairside. Patient education, CE/CME, clinical summaries and product copy. Available for briefs.">
+
+<!-- ============================================================
+     BEFORE YOU PUBLISH: replace the two URLs below with your real
+     address, e.g. https://shahnazfaraz.github.io/portfolio/
+     LinkedIn needs the full address, not a relative path.
+     ============================================================ -->
+<meta property="og:url" content="https://YOURNAME.github.io/portfolio/">
+<meta property="og:image" content="https://YOURNAME.github.io/portfolio/preview.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cedar Science Studio">
+<meta property="og:title" content="Shahnaz Faraz — freelance medical &amp; dental writer">
+<meta property="og:description" content="A specialist pediatric dentist of 13 years who writes patient education, CE/CME, clinical summaries and product copy. Available for briefs.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shahnaz Faraz — freelance medical &amp; dental writer">
+<meta name="twitter:description" content="A specialist pediatric dentist of 13 years who writes patient education, CE/CME, clinical summaries and product copy. Available for briefs.">
+<meta name="twitter:image" content="https://YOURNAME.github.io/portfolio/preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23150610'/%3E%3Cpath d='M9 11c0-3 2.6-4.6 5-3.4 1.2.6 2.8.6 4 0 2.4-1.2 5 .4 5 3.4 0 2.4-.6 4-1.2 7-.6 3.4-1.2 6.6-2.4 9-.6 1.6-2.4 1.6-3-.6-.6-3-1-5-1.4-7.4-.4 2.4-.8 4.4-1.4 7.4-.6 2.2-2.4 2.2-3 .6-1.2-2.4-1.8-5.6-2.4-9C9.6 15 9 13.4 9 11z' fill='%23FCF7EE'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* mouth anatomy: deep mucosa, gum pink, enamel, dentin */
+  --void:#150610;
+  --tissue:#1E0A18;
+  --tissue-2:#260D1E;
+  --surface:rgba(255,255,255,.045);
+  --gum:#E2718F;
+  --gum-deep:#8E2C48;
+  --blush:#F5B3C2;
+  --enamel:#FCF7EE;
+  --dentin:#EFD9AE;
+  --clinical:#6FD9BE;
+  --hair:rgba(245,179,194,.22);
+  --ink-soft:rgba(252,247,238,.72);
+  --ink-faint:rgba(252,247,238,.5);
+
+  --display:"Baloo 2",'Trebuchet MS',sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,72px);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--void);color:var(--enamel);
+  font-family:var(--body);font-size:clamp(16px,1.05vw,18px);line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;letter-spacing:-.015em}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad);position:relative;z-index:1}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gum);display:block;margin:0 0 .9rem}
+section{padding-block:clamp(58px,7vw,100px);position:relative}
+.sec-head{max-width:62ch;margin-bottom:clamp(28px,4vw,50px)}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.2rem)}
+.sec-head p{margin-top:.8rem;font-size:1.06rem;color:var(--ink-soft);font-weight:300}
+
+/* textures */
+.tooth-field::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M24 20c0-5 4-8 8-6 2 1 4 1 6 0 4-2 8 1 8 6 0 4-1 7-2 12-1 6-2 12-4 16-1 3-4 3-5-1-1-5-2-9-2-13-1 4-2 8-3 13-1 4-4 4-5 1-2-4-3-10-4-16-1-5-2-8-2-12z' fill='%23F5B3C2' fill-opacity='.05'/%3E%3C/svg%3E");
+}
+.dot-field::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(245,179,194,.13) 1.1px,transparent 1.1px);background-size:22px 22px;
+}
+.glow::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 45% at 78% 12%,rgba(226,113,143,.16),transparent 70%);
+}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(21,6,16,.9);backdrop-filter:blur(10px) saturate(1.3);border-bottom:1px solid var(--hair)}
+.nav .wrap{display:flex;align-items:center;gap:1.1rem;height:60px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.02rem;margin-right:auto;white-space:nowrap;line-height:1.15}
+.brand small{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gum);font-weight:400}
+.nav .links{display:flex;gap:1.15rem;overflow-x:auto;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav .links a{font-family:var(--mono);font-size:.71rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav .links a:hover{color:var(--gum)}
+.nav .btn{padding:.6em 1.1em;font-size:.68rem}
+@media(max-width:820px){.nav .links{display:none}}
+
+/* buttons */
+.btn{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:.85em 1.5em;border-radius:999px;border:1px solid transparent;display:inline-block;cursor:pointer;
+  transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}
+.btn-solid{background:var(--gum);color:#2A0A16;font-weight:500}
+.btn-solid:hover{transform:translateY(-2px);background:var(--blush)}
+.btn-ghost{border-color:var(--hair);color:var(--enamel);background:transparent}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--gum);color:var(--gum)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.7rem}
+
+/* availability chip */
+.status{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;border:1px solid rgba(111,217,190,.4);background:rgba(111,217,190,.08);
+  color:var(--clinical);border-radius:999px;padding:.5em 1em;margin-bottom:1.3rem}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--clinical);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(111,217,190,.6)}70%{box-shadow:0 0 0 9px rgba(111,217,190,0)}100%{box-shadow:0 0 0 0 rgba(111,217,190,0)}}
+
+/* hero */
+.hero{background:linear-gradient(178deg,var(--tissue) 0%,var(--void) 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,58px);
+  align-items:center;padding-block:clamp(38px,5.5vw,68px) clamp(44px,6vw,78px)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.7rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.3em}
+.hero h1 em{font-style:normal;color:var(--gum);display:block}
+.hero .lede{font-size:1.12rem;max-width:46ch;color:var(--ink-soft);font-weight:300}
+.hero .lede strong{color:var(--enamel);font-weight:400}
+.hero .sig{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dentin);margin:1.4rem 0 0;line-height:1.9}
+
+/* marquee */
+.ticker{border-block:1px solid var(--hair);background:rgba(226,113,143,.06);overflow:hidden;padding:.85rem 0}
+.ticker-track{display:flex;gap:2.4rem;width:max-content;animation:slide 46s linear infinite}
+.ticker span{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap}
+.ticker span b{color:var(--gum);font-weight:400}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* dental chart */
+.chart-card{background:var(--surface);border:1px solid var(--hair);border-radius:28px;padding:clamp(14px,2vw,22px);position:relative}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-family:var(--mono);
+  font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gum);margin-bottom:.2rem}
+.chart-head b{color:var(--ink-faint);font-weight:400}
+.hint{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);z-index:3;pointer-events:none;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;text-align:center;color:#2A0A16;
+  background:var(--dentin);border-radius:999px;padding:.7em 1.2em;box-shadow:0 12px 34px rgba(0,0,0,.5);
+  animation:bob 2.6s ease-in-out infinite;transition:opacity .4s ease;max-width:80%}
+@keyframes bob{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-62%)}}
+.chart-card.used .hint{opacity:0}
+#arch{width:100%;height:auto;display:block;touch-action:manipulation}
+.tooth{cursor:pointer;outline:none}
+.tooth .crown{fill:var(--enamel);stroke:rgba(21,6,16,.4);stroke-width:1;transition:fill .18s ease}
+.tooth .lbl{font-family:var(--mono);font-size:11px;fill:rgba(245,179,194,.65);text-anchor:middle;transition:fill .18s ease}
+.tooth:hover .crown,.tooth:focus-visible .crown{fill:var(--blush)}
+.tooth:hover .lbl,.tooth:focus-visible .lbl{fill:var(--dentin)}
+.tooth:focus-visible .crown{stroke:var(--dentin);stroke-width:2.5}
+.tooth.on .crown{fill:var(--gum);stroke:var(--enamel);stroke-width:1.6}
+.tooth.on .lbl{fill:var(--gum)}
+.tooth.beckon .crown{animation:beckon 2.8s ease-in-out infinite}
+@keyframes beckon{0%,100%{fill:var(--enamel)}50%{fill:var(--blush)}}
+.gumline{fill:none;stroke:rgba(226,113,143,.28);stroke-width:11;stroke-linecap:round}
+.midline{stroke:rgba(245,179,194,.28);stroke-width:1;stroke-dasharray:4 7}
+.note{margin-top:.5rem;border-top:1px dashed var(--hair);padding-top:.9rem;min-height:140px}
+.note .cat{font-family:var(--mono);font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dentin);display:block;margin-bottom:.45rem}
+.note h3{font-size:1.3rem;font-weight:600;margin-bottom:.2rem}
+.note .meta{font-family:var(--mono);font-size:.69rem;color:var(--gum);margin:0 0 .5rem}
+.note p{font-size:.94rem;color:var(--ink-soft);margin:0;font-weight:300}
+.note.flash{animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.panel{background:var(--surface);border:1px solid var(--hair);border-radius:24px;padding:clamp(18px,2.6vw,30px)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:22px;padding:1.5rem;text-decoration:none;display:block;
+  transition:transform .2s ease,background .2s ease,border-color .2s ease}
+a.card:hover{transform:translateY(-5px) rotate(-.5deg);background:rgba(226,113,143,.12);border-color:var(--gum)}
+.card .kind{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dentin);display:block;margin-bottom:.8rem}
+.card h3{font-size:1.16rem;font-weight:600;margin-bottom:.5rem}
+.card p{font-size:.93rem;color:var(--ink-soft);margin:0;font-weight:300}
+.card .go{font-family:var(--mono);font-size:.69rem;color:var(--gum);margin-top:1rem;display:block}
+
+/* brief builder */
+.builder{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+.q{margin-bottom:1.5rem}
+.q > label{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gum);display:block;margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-family:var(--mono);font-size:.73rem;background:transparent;color:var(--ink-soft);border:1px solid var(--hair);
+  border-radius:999px;padding:.6em 1.05em;cursor:pointer;transition:background .16s ease,color .16s ease,border-color .16s ease}
+.chip:hover{border-color:var(--gum);color:var(--enamel)}
+.chip[aria-pressed="true"]{background:var(--gum);border-color:var(--gum);color:#2A0A16;font-weight:500}
+.brief-out{background:rgba(0,0,0,.3);border:1px solid var(--hair);border-radius:20px;padding:1.5rem;position:sticky;top:82px}
+.brief-out .ttl{font-family:var(--mono);font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dentin);display:block;margin-bottom:.9rem}
+#briefText{font-size:1rem;color:var(--enamel);min-height:7.5em;font-weight:300}
+#briefText .fill{color:var(--gum);border-bottom:1px dashed rgba(226,113,143,.5)}
+.brief-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+
+/* readability demo */
+.demo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(20px,3vw,40px);align-items:start}
+.slider-wrap{margin:0 0 1.5rem}
+.slider-wrap > label{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gum);display:block;margin-bottom:1.1rem}
+input[type=range]{width:100%;-webkit-appearance:none;appearance:none;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:99px;background:linear-gradient(90deg,var(--gum-deep),var(--gum),var(--blush))}
+input[type=range]::-moz-range-track{height:6px;border-radius:99px;background:linear-gradient(90deg,var(--gum-deep),var(--gum),var(--blush))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--enamel);
+  border:4px solid var(--gum);margin-top:-9px;box-shadow:0 3px 10px rgba(0,0,0,.5)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--enamel);border:4px solid var(--gum)}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-faint);margin-top:.7rem}
+.ticks b{font-weight:400;cursor:pointer;transition:color .2s ease}
+.ticks b.on{color:var(--dentin)}
+#sample{font-size:1.1rem;line-height:1.66;color:var(--enamel);font-weight:300;min-height:9.5em;margin:0}
+.gauge{text-align:center}
+.gauge svg{width:100%;max-width:210px;height:auto}
+.gauge .val{font-family:var(--display);font-size:2.9rem;font-weight:700;line-height:1;display:block;margin-top:-2.7rem}
+.gauge .cap{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-top:.5rem}
+.gauge .verdict{font-size:1rem;color:var(--ink-soft);margin-top:1.1rem;font-weight:300}
+.metrics{display:grid;gap:.55rem;margin-top:1.3rem;font-family:var(--mono);font-size:.71rem;color:var(--ink-faint);text-align:left}
+.metrics div{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--hair);padding-bottom:.4rem}
+.metrics b{color:var(--enamel);font-weight:400}
+
+/* timeline */
+.tl{border-top:1px solid var(--hair)}
+.tl-row{display:grid;grid-template-columns:170px minmax(0,1fr) 190px;gap:1.4rem;padding:1.5rem 0;
+  border-bottom:1px solid var(--hair);align-items:baseline;transition:background .2s ease,padding-left .2s ease}
+.tl-row:hover{background:rgba(226,113,143,.09);padding-left:.9rem}
+.tl-row .yr{font-family:var(--mono);font-size:.75rem;color:var(--gum)}
+.tl-row h3{font-size:1.26rem;font-weight:600}
+.tl-row .org{font-style:italic;color:var(--ink-soft);margin:.15rem 0 0;font-size:1rem}
+.tl-row .desc{margin:.5rem 0 0;font-size:.96rem;color:var(--ink-soft);max-width:62ch;font-weight:300}
+.tl-row .loc{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(26px,4vw,56px);align-items:start}
+.about-body{font-size:1.13rem;max-width:60ch;color:var(--ink-soft);font-weight:300}
+.about-body strong{color:var(--enamel);font-weight:400}
+.stats{border-left:3px solid var(--gum);padding-left:1.4rem;display:grid;gap:1.4rem}
+.stat b{display:block;font-family:var(--display);font-size:2.4rem;font-weight:700;line-height:1;color:var(--blush)}
+.stat span{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* credentials */
+.cred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.2rem}
+.cred{background:var(--surface);border:1px solid var(--hair);border-radius:20px;padding:1.5rem;position:relative;overflow:hidden}
+.cred::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--gum)}
+.cred.d::before{background:var(--dentin)}
+.cred.c::before{background:var(--clinical)}
+.cred .kind{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:.7rem}
+.cred h3{font-size:1.1rem;font-weight:600;margin-bottom:.3rem}
+.cred p{font-size:.92rem;color:var(--ink-soft);margin:.3rem 0 0;font-weight:300}
+.cred .id{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);margin-top:.6rem}
+
+/* skills */
+.pills{display:flex;flex-wrap:wrap;gap:.55rem;list-style:none;padding:0;margin:0}
+.pills li{background:var(--surface);border:1px solid var(--hair);border-radius:999px;padding:.68em 1.25em;
+  font-family:var(--mono);font-size:.76rem;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
+.pills li:hover{transform:translateY(-3px) rotate(-1.4deg);background:var(--dentin);color:#2A0A16;border-color:var(--dentin)}
+.lang{display:grid;gap:.85rem;margin-top:2.4rem;max-width:560px}
+.lang .row{display:grid;grid-template-columns:120px 1fr 150px;align-items:center;gap:1rem}
+.lang b{font-weight:400;font-size:1.02rem}
+.lang .lvl{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);letter-spacing:.06em;text-align:right}
+.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gum-deep),var(--gum));border-radius:99px}
+
+/* contact */
+#contact{background:linear-gradient(180deg,var(--void),var(--tissue-2));text-align:center}
+#contact h2{font-size:clamp(2.1rem,5.4vw,3.8rem);max-width:20ch;margin:0 auto .8rem}
+#contact h2 em{font-style:normal;color:var(--gum)}
+#contact .sub{color:var(--ink-soft);max-width:52ch;margin:0 auto 2rem;font-weight:300}
+.mail{font-family:var(--display);font-weight:600;font-size:clamp(1.35rem,4vw,2.4rem);color:var(--dentin);
+  text-decoration:none;border-bottom:2px dashed rgba(239,217,174,.45)}
+.mail:hover{color:var(--gum);border-color:var(--gum)}
+footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono);font-size:.67rem;
+  letter-spacing:.08em;text-align:center;padding:0 0 2.6rem}
+
+@media(max-width:960px){
+  .hero .wrap,.builder,.demo,.about-grid{grid-template-columns:1fr}
+  .brief-out{position:static}
+  .tl-row{grid-template-columns:1fr;gap:.3rem}
+  .tl-row .loc{order:3}
+  .lang .row{grid-template-columns:110px 1fr}
+  .lang .lvl{grid-column:1/-1;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--dentin);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">Shahnaz Faraz<small>Cedar Science Studio</small></div>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#demo">Plain language</a>
+      <a href="#brief">Start a brief</a>
+      <a href="#about">About</a>
+      <a href="#work">Published</a>
+      <a href="#credentials">Credentials</a>
+    </div>
+    <a class="btn btn-solid" href="#brief">Hire me</a>
+  </div>
+</nav>
+
+<header class="hero glow">
+  <div class="wrap">
+    <div>
+      <span class="status"><i></i>Available for freelance briefs</span>
+      <h1>Freelance medical &amp; dental writer<em>who still works chairside.</em></h1>
+      <p class="lede">I'm Shahnaz Faraz, a specialist pediatric dentist of thirteen years and founder of <strong>Cedar Science Studio</strong>. I write patient education, CE and CME material, clinical summaries and product copy — clinically accurate, and genuinely readable.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#brief">Start a brief</a>
+        <a class="btn btn-ghost" href="mailto:info@cedarmw.com">info@cedarmw.com</a>
+      </div>
+      <p class="sig">Riyadh, Saudi Arabia · working remotely worldwide<br>Taking new clients · trial pieces and retainers welcome</p>
+    </div>
+
+    <div class="chart-card" id="chartCard">
+      <div class="chart-head"><span>Chart · primary dentition</span><b>A–T</b></div>
+      <div class="hint" id="hint">Click a tooth to find out more about me</div>
+      <svg id="arch" viewBox="0 0 520 600" role="group" aria-label="Interactive dental chart. Each tooth opens one qualification, role or service."></svg>
+      <div class="note" id="note" aria-live="polite">
+        <span class="cat">Chart note</span>
+        <h3>Twenty teeth, twenty entries</h3>
+        <p class="meta">Charted in Universal notation, A–T</p>
+        <p>Every primary tooth here holds one piece of my record — a post, a qualification, a certification, or something I write. Pick one.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tick"></div></div>
+
+<section id="services" class="tooth-field">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cedar Science Studio · open for work</span>
+      <h2>What you can hand me.</h2>
+      <p>A medical and dental writing practice run by a working clinician. You get evidence handled properly and prose a real person can follow — not one at the cost of the other.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="kind">For parents &amp; patients</span>
+        <h3>Patient education &amp; parent guides</h3>
+        <p>Brochures, handouts, pre- and post-op instructions, web copy. The information a parent needs, in the words they already use.</p>
+      </div>
+      <div class="card">
+        <span class="kind">For clinicians</span>
+        <h3>CE &amp; CME content</h3>
+        <p>Continuing education modules and training resources for dentists and dental teams, structured so they can actually be taught from.</p>
+      </div>
+      <div class="card">
+        <span class="kind">For science teams</span>
+        <h3>Clinical summaries &amp; research articles</h3>
+        <p>Accurate citation, honest limitations, no overstatement. Literature summarised without losing what the evidence actually says.</p>
+      </div>
+      <div class="card">
+        <span class="kind">For brands</span>
+        <h3>Product development copy</h3>
+        <p>Claims that survive scrutiny, written by someone who has used the product category on real patients — and who sits on an R&amp;D team.</p>
+      </div>
+      <div class="card">
+        <span class="kind">For visibility</span>
+        <h3>Blog &amp; website content with SEO</h3>
+        <p>Search-visible writing a clinician would still put their name to. Ongoing retainers welcome.</p>
+      </div>
+      <div class="card">
+        <span class="kind">Specialist areas</span>
+        <h3>Where I go deepest</h3>
+        <p>Paediatrics · paediatric &amp; general dentistry · neurodivergent and anxious patients · clinician wellbeing and burnout · telehealth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="dot-field" style="background:var(--tissue)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Live rewrite</span>
+      <h2>Watch me take the reading age down.</h2>
+      <p>One clinical fact about fluoride varnish, written three ways. Drag the slider and the reading-ease score recalculates on the spot. This is the whole service in one control.</p>
+    </div>
+    <div class="demo">
+      <div class="panel">
+        <div class="slider-wrap">
+          <label for="lvl">Written for</label>
+          <input type="range" id="lvl" min="0" max="2" step="1" value="0" aria-label="Choose audience: journal, dental team, or parent">
+          <div class="ticks"><b data-i="0" class="on">Journal</b><b data-i="1">Dental team</b><b data-i="2">Parent</b></div>
+        </div>
+        <p id="sample"></p>
+      </div>
+      <div class="panel gauge">
+        <svg viewBox="0 0 200 112" aria-hidden="true">
+          <path d="M18 100 A 82 82 0 0 1 182 100" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="13" stroke-linecap="round"/>
+          <path id="arc" d="M18 100 A 82 82 0 0 1 182 100" fill="none" stroke="#E2718F" stroke-width="13" stroke-linecap="round"
+                stroke-dasharray="258" stroke-dashoffset="258" style="transition:stroke-dashoffset .5s ease,stroke .5s ease"/>
+        </svg>
+        <b class="val" id="score">—</b>
+        <span class="cap">Flesch reading ease</span>
+        <p class="verdict" id="verdict"></p>
+        <div class="metrics">
+          <div><span>Words per sentence</span><b id="mWps">—</b></div>
+          <div><span>Syllables per word</span><b id="mSyl">—</b></div>
+          <div><span>Reads as</span><b id="mGrade">—</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="brief" class="tooth-field">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Brief builder</span>
+      <h2>Build your brief in four taps.</h2>
+      <p>Answer four questions and this writes the enquiry for you. Send it, or copy it into your own email — either way I'll come back with a scope, a timeline and a price.</p>
+    </div>
+    <div class="builder">
+      <div>
+        <div class="q" data-group="what">
+          <label>What do you need written?</label>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false" data-v="patient education material">Patient education</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="a parent-facing health guide">Parent guide</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="CE / CME content">CE / CME</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="a clinical summary">Clinical summary</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="a research article">Research article</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="product development copy">Product copy</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="blog and website content">Blog &amp; SEO</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="something else we should talk through">Something else</button>
+          </div>
+        </div>
+        <div class="q" data-group="who">
+          <label>Who reads it?</label>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false" data-v="parents and families">Parents &amp; families</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="clinicians and dental teams">Clinicians &amp; teams</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="consumers and buyers">Consumers &amp; buyers</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="an internal or regulatory audience">Internal / regulatory</button>
+          </div>
+        </div>
+        <div class="q" data-group="size">
+          <label>How much?</label>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false" data-v="a single piece">One piece</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="a multi-piece project">Multi-piece project</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="an ongoing monthly retainer">Ongoing retainer</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="a trial piece first">Trial piece first</button>
+          </div>
+        </div>
+        <div class="q" data-group="when">
+          <label>When do you need it?</label>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false" data-v="this week">This week</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="within the month">Within the month</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="next quarter">Next quarter</button>
+            <button class="chip" type="button" aria-pressed="false" data-v="on a flexible timeline">Flexible</button>
+          </div>
+        </div>
+      </div>
+      <div class="brief-out">
+        <span class="ttl">Your brief</span>
+        <p id="briefText"></p>
+        <div class="brief-actions">
+          <a class="btn btn-solid" id="sendBrief" href="mailto:info@cedarmw.com">Send this brief</a>
+          <button class="btn btn-ghost" type="button" id="copyBrief">Copy text</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="glow" style="background:var(--tissue)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why a clinician writer</span>
+      <h2>Thirteen years of explaining things to frightened people.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Most of my working life has been spent with children who are frightened of the chair — and with the parent beside them trying to work out what to ask. <strong>Behaviour management, sedation, treatment under general anaesthesia, and the care of anxious and neurodivergent children</strong>, across Boston, Dubai and Riyadh.</p>
+        <p>The treatment nearly always went well. What kept going wrong was the explaining: leaflets nobody could follow, consent material that assumed you already had the vocabulary, education modules written by people who had never had to deliver the message out loud.</p>
+        <p>So I started writing it properly. <strong>Cedar Science Studio</strong> is where that work lives — health content that's honest about the evidence and still makes sense on a first read. I'm also an <strong>Advanced Certified Autism Specialist</strong>, which shapes how I write for families whose children process information differently.</p>
+        <p><strong>I'm taking on new clients.</strong> If you're a healthcare brand, a dental company or an educational organisation that needs a writer who understands both the science and the patient in the chair, I'd like to hear about it.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>13+</b><span>Years in clinical pediatric dentistry</span></div>
+        <div class="stat"><b>3</b><span>Countries practised in — India, UAE, Saudi Arabia</span></div>
+        <div class="stat"><b>4</b><span>Languages written and spoken</span></div>
+        <div class="stat"><b>7,000</b><span>Hours of specialist training at Boston University</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Published</span>
+      <h2>Recent work.</h2>
+      <p>Live on cedarmw.com — samples of both the parent-facing and the clinical register.</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="https://cedarmw.com/healthy-mouth-and-neurodivergent-children/" target="_blank" rel="noopener">
+        <span class="kind">Parent brochure</span>
+        <h3>Healthy Mouth and Neurodivergent Children</h3>
+        <p>Keeping a neurodivergent child's mouth healthy without a daily battle.</p>
+        <span class="go">Read on cedarmw.com →</span>
+      </a>
+      <a class="card" href="https://cedarmw.com/sensory-smart-approaches-neurodiverse-children/" target="_blank" rel="noopener">
+        <span class="kind">Clinical guide</span>
+        <h3>Sensory Smart Approaches to Dental Treatment</h3>
+        <p>Sensory-aware adjustments dental teams can make for neurodiverse children.</p>
+        <span class="go">Read on cedarmw.com →</span>
+      </a>
+      <a class="card" href="https://cedarmw.com/a-fluoride-conversationwhat-does-the-evidence-say/" target="_blank" rel="noopener">
+        <span class="kind">Evidence review</span>
+        <h3>A Fluoride Conversation: What Does the Evidence Say?</h3>
+        <p>The fluoride question answered with the evidence, in plain terms.</p>
+        <span class="go">Read on cedarmw.com →</span>
+      </a>
+      <div class="card">
+        <span class="kind">Product development</span>
+        <h3>ByLin MedTech</h3>
+        <p>Independent research and product development collaborator, Jun 2026 – present. An oral healthcare product originating from my own concept, developed with their formulation and R&amp;D team.</p>
+        <span class="go">Kerala, India · remote</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chairside" class="dot-field" style="background:var(--tissue)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Chairside</span><h2>Where I've practised.</h2></div>
+    <div class="tl">
+      <div class="tl-row">
+        <div class="yr">Oct 2020 — present</div>
+        <div><h3>Specialist Pediatric Dentist</h3><p class="org">Dr. Sulaiman Al Habib Medical Group</p>
+        <p class="desc">Behaviour management, sedation dentistry, and care of anxious and neurodivergent children — a gentle approach and a commitment to positive, family-centred dental experiences.</p></div>
+        <div class="loc">Riyadh, Saudi Arabia</div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">Aug 2014 — Aug 2019</div>
+        <div><h3>Specialist Pediatric Dentist</h3><p class="org">Medcare Pediatric Speciality Clinic</p>
+        <p class="desc">Tailored behaviour guidance, nitrous oxide sedation and treatment under general anaesthesia. Patient-centred, family-focused care.</p></div>
+        <div class="loc">Dubai, UAE</div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">May 2013 — May 2014</div>
+        <div><h3>Specialist Pediatric Dentist</h3><p class="org">Dr. Sulaiman Al-Habib Medical Group</p></div>
+        <div class="loc">Saudi Arabia</div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">Apr 2012 — May 2014</div>
+        <div><h3>Specialist Pediatric Dentist</h3><p class="org">Tower Clinic · part-time</p></div>
+        <div class="loc">Dubai Healthcare City</div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">Jun 2009 — Jul 2012</div>
+        <div><h3>Resident, Pediatric Dentistry</h3><p class="org">Boston University Institute for Dental Research and Education</p>
+        <p class="desc">Class of 2011. A 36-month, 7,000-hour programme — 68% supervised clinical activity, 21% academic, 15% research.</p></div>
+        <div class="loc">Boston, USA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">The record</span><h2>Qualified, licensed, certified.</h2></div>
+    <div class="cred-grid">
+      <div class="cred"><span class="kind">Postgraduate</span><h3>CAGS, M.D.S. Pediatric Dentistry</h3>
+        <p>Boston University Institute of Dental Education and Research · 2008–2011</p><p class="id">Pediatric Dentistry / Pedodontics</p></div>
+      <div class="cred"><span class="kind">Undergraduate</span><h3>BDS, Dentistry</h3><p>Yenepoya Dental College · 2000–2005</p></div>
+      <div class="cred c"><span class="kind">Certification</span><h3>Advanced Certified Autism Specialist</h3><p>IBCCES</p><p class="id">Credential ID ACAS23424001</p></div>
+      <div class="cred c"><span class="kind">Certification</span><h3>Assessment and Diagnosis of Tongue Ties</h3><p>Tongue Tied Academy</p></div>
+      <div class="cred c"><span class="kind">Registration</span><h3>Resident Pediatric Dentist</h3><p>Saudi Commission for Health Specialties</p></div>
+      <div class="cred d"><span class="kind">Honour</span><h3>Second Prize, Poster Presentation</h3><p>AEEDC 2013 · with Medcare Pediatric Speciality Clinic</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="tooth-field" style="background:var(--tissue)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Skills &amp; languages</span><h2>What I bring to the table.</h2></div>
+    <ul class="pills">
+      <li>Communication</li><li>Scientific Writing</li><li>Tongue tie assessment &amp; diagnosis</li>
+      <li>Advanced Certified Autism Specialist</li><li>Healthcare</li><li>Team Building</li>
+      <li>Strategic Planning</li><li>Project Management</li><li>Clinical Research</li><li>Customer Service</li>
+    </ul>
+    <div class="lang">
+      <div class="row"><b>English</b><div class="bar"><i style="width:97%"></i></div><span class="lvl">Full professional</span></div>
+      <div class="row"><b>Malayalam</b><div class="bar"><i style="width:100%"></i></div><span class="lvl">Native / bilingual</span></div>
+      <div class="row"><b>Hindi</b><div class="bar"><i style="width:100%"></i></div><span class="lvl">Native / bilingual</span></div>
+      <div class="row"><b>Arabic</b><div class="bar"><i style="width:72%"></i></div><span class="lvl">Professional working</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="status"><i></i>Taking briefs now</span>
+    <h2>Let's get your writing <em>off your desk.</em></h2>
+    <p class="sub">Healthcare brand, dental company, or educational organisation — tell me what you need and I'll come back with a scope, a timeline and a price.</p>
+    <p><a class="mail" href="mailto:info@cedarmw.com">info@cedarmw.com</a></p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-solid" href="#brief">Build a brief</a>
+      <a class="btn btn-ghost" href="https://cedarmw.com" target="_blank" rel="noopener">cedarmw.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/shahnazfaraz/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>Shahnaz Faraz · Cedar Science Studio · Riyadh, Saudi Arabia · info@cedarmw.com</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ===== dental chart ===== */
+  var DATA = {
+    A:{t:"molar",cat:"Practice",title:"Specialist Pediatric Dentist",meta:"Tower Clinic · Apr 2012 – May 2014 · Dubai Healthcare City",body:"Part-time specialist practice at Dubai Healthcare City."},
+    B:{t:"molar",cat:"Education",title:"CAGS, M.D.S. Pediatric Dentistry",meta:"Boston University IDER · 2008 – 2011",body:"A 36-month, 7,000-hour specialist programme — clinical, academic and research training in one."},
+    C:{t:"canine",cat:"Practice",title:"Specialist Pediatric Dentist",meta:"Medcare Pediatric Speciality Clinic · Aug 2014 – Aug 2019 · Dubai",body:"Behaviour guidance, nitrous oxide sedation and treatment under general anaesthesia."},
+    D:{t:"incisor",cat:"Product development",title:"Research & Product Development Collaborator",meta:"ByLin MedTech · Jun 2026 – present · remote",body:"Developing an oral healthcare product from my own concept, with their formulation and R&D team."},
+    E:{t:"incisor",cat:"Current practice",title:"Specialist Pediatric Dentist",meta:"Dr. Sulaiman Al Habib Medical Group · Oct 2020 – present · Riyadh",body:"Still chairside every week. It is where the writing comes from."},
+    F:{t:"incisor",cat:"Open for work",title:"Founder & Medical Writer",meta:"Cedar Science Studio · May 2026 – present",body:"My freelance writing practice, and the reason this site exists. Taking briefs now."},
+    G:{t:"incisor",cat:"Certification",title:"Advanced Certified Autism Specialist",meta:"IBCCES · Credential ACAS23424001",body:"Formal certification in supporting autistic and neurodivergent patients."},
+    H:{t:"canine",cat:"Training",title:"Resident, Pediatric Dentistry",meta:"Boston University IDER · Jun 2009 – Jul 2012",body:"Class of 2011. 68% supervised clinical activity, 21% academic, 15% research."},
+    I:{t:"molar",cat:"Education",title:"BDS, Dentistry",meta:"Yenepoya Dental College · 2000 – 2005",body:"Bachelor of Dental Surgery."},
+    J:{t:"molar",cat:"Practice",title:"Specialist Pediatric Dentist",meta:"Dr. Sulaiman Al-Habib Medical Group · May 2013 – May 2014",body:"First appointment with the group, before returning in 2020."},
+    K:{t:"molar",cat:"Honour",title:"Second Prize, Poster Presentation",meta:"AEEDC 2013 · with Medcare Pediatric Speciality Clinic",body:"Recognised at the Dubai international dental conference."},
+    L:{t:"molar",cat:"Certification",title:"Assessment and Diagnosis of Tongue Ties",meta:"Tongue Tied Academy",body:"Certified in tongue tie assessment and diagnosis."},
+    M:{t:"canine",cat:"Service",title:"Product development copy",meta:"For dental and healthcare brands",body:"Claims that survive scrutiny, from someone who has used the product category on real patients."},
+    N:{t:"incisor",cat:"Service",title:"CE and CME content",meta:"For educational organisations",body:"Continuing education material for dentists and dental teams, structured to be taught from."},
+    O:{t:"incisor",cat:"Service",title:"Patient education & parent guides",meta:"Brochures, handouts, web copy",body:"The information a parent needs, at the moment they need it, in words they already use."},
+    P:{t:"incisor",cat:"Service",title:"Research articles & clinical summaries",meta:"For clinical and academic audiences",body:"Accurate citation, honest limitations, no overstatement."},
+    Q:{t:"incisor",cat:"Service",title:"Healthcare communication",meta:"Evidence-informed storytelling",body:"Where the science and the story meet — the reason Cedar Science Studio exists."},
+    R:{t:"canine",cat:"Service",title:"Blog & website content with SEO",meta:"For healthcare brands and practices",body:"Search-visible writing a clinician would still put their name to."},
+    S:{t:"molar",cat:"Registration",title:"Resident Pediatric Dentist",meta:"Saudi Commission for Health Specialties",body:"Registered with the Saudi Commission for Health Specialties."},
+    T:{t:"molar",cat:"Languages",title:"Four languages",meta:"English · Malayalam · Hindi · Arabic",body:"Full professional English, native Malayalam and Hindi, professional working Arabic."}
+  };
+  var UPPER=["A","B","C","D","E","F","G","H","I","J"], LOWER=["T","S","R","Q","P","O","N","M","L","K"];
+  var PATHS={
+    incisor:"M -11 -19 Q -11 -27 0 -27 Q 11 -27 11 -19 L 11 0 Q 9 14 4 26 Q 0 30 -4 26 Q -9 14 -11 0 Z",
+    canine:"M 0 -30 Q 12 -21 12 -9 L 12 1 Q 9 15 4 27 Q 0 31 -4 27 Q -9 15 -12 1 L -12 -9 Q -12 -21 0 -30 Z",
+    molar:"M -18 -14 Q -18 -25 -9 -24 Q -4 -20 0 -24 Q 4 -20 9 -24 Q 18 -25 18 -14 L 18 -2 Q 16 9 12 24 Q 9 30 6 24 Q 3 12 2 -2 L -2 -2 Q -3 12 -6 24 Q -9 30 -12 24 Q -16 9 -18 -2 Z"
+  };
+  var NS="http://www.w3.org/2000/svg";
+  var svg=document.getElementById("arch"), note=document.getElementById("note"), card=document.getElementById("chartCard");
+  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a){if(Object.prototype.hasOwnProperty.call(a,k))e.setAttribute(k,a[k]);}return e;}
+
+  var CX=260,RX=196,RY=166,UP_CY=258,LO_CY=344;
+  function arcPath(cy,a0,a1,pad){
+    var p0=a0*Math.PI/180,p1=a1*Math.PI/180,sweep=(a1>a0)?1:0;
+    return "M "+(CX+(RX+pad)*Math.cos(p0)).toFixed(1)+" "+(cy+(RY+pad)*Math.sin(p0)).toFixed(1)+
+           " A "+(RX+pad)+" "+(RY+pad)+" 0 0 "+sweep+" "+
+           (CX+(RX+pad)*Math.cos(p1)).toFixed(1)+" "+(cy+(RY+pad)*Math.sin(p1)).toFixed(1);
+  }
+  svg.appendChild(el("path",{"class":"gumline",d:arcPath(UP_CY,196,344,-19)}));
+  svg.appendChild(el("path",{"class":"gumline",d:arcPath(LO_CY,164,16,-19)}));
+
+  function place(letters,cy,a0,a1){
+    letters.forEach(function(L,i){
+      var th=a0+(a1-a0)*(i/(letters.length-1)), rad=th*Math.PI/180;
+      var x=CX+RX*Math.cos(rad), y=cy+RY*Math.sin(rad), rot=270-th, d=DATA[L];
+      var g=el("g",{"class":"tooth"+(L==="F"?" beckon":""),tabindex:"0",role:"button","aria-label":"Tooth "+L+": "+d.title,"data-k":L});
+      var pos=el("g",{transform:"translate("+x.toFixed(1)+","+y.toFixed(1)+")"});
+      var spin=el("g",{transform:"rotate("+rot.toFixed(1)+")"});
+      spin.appendChild(el("path",{"class":"crown",d:PATHS[d.t]}));
+      pos.appendChild(spin); g.appendChild(pos);
+      var lab=el("text",{"class":"lbl",x:(CX+(RX+46)*Math.cos(rad)).toFixed(1),y:(cy+(RY+46)*Math.sin(rad)+4).toFixed(1)});
+      lab.textContent=L; g.appendChild(lab);
+      svg.appendChild(g);
+    });
+  }
+  place(UPPER,UP_CY,194,346);
+  place(LOWER,LO_CY,166,14);
+  svg.appendChild(el("line",{"class":"midline",x1:"260",y1:"264",x2:"260",y2:"338"}));
+
+  function select(L){
+    var d=DATA[L]; if(!d) return;
+    var all=svg.querySelectorAll(".tooth");
+    for(var i=0;i<all.length;i++){all[i].classList.remove("on");all[i].classList.remove("beckon");}
+    var t=svg.querySelector('.tooth[data-k="'+L+'"]'); if(t) t.classList.add("on");
+    card.classList.add("used");
+    note.innerHTML='<span class="cat">'+d.cat+' · tooth '+L+'</span><h3>'+d.title+'</h3><p class="meta">'+d.meta+'</p><p>'+d.body+'</p>';
+    note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash");
+  }
+  svg.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest(".tooth"); if(t) select(t.getAttribute("data-k"));});
+  svg.addEventListener("keydown",function(e){
+    if(e.key!=="Enter"&&e.key!==" ") return;
+    var t=e.target.closest&&e.target.closest(".tooth");
+    if(t){e.preventDefault();select(t.getAttribute("data-k"));}
+  });
+
+  /* ===== ticker ===== */
+  var items=["Patient education","Parent guides","CE &amp; CME","Clinical summaries","Research articles","Product copy",
+             "Blog &amp; SEO","Paediatric dentistry","Neurodivergent care","Clinician wellbeing","Telehealth"];
+  var line=items.map(function(s){return '<span>'+s+' <b>&bull;</b></span>';}).join("");
+  document.getElementById("tick").innerHTML=line+line;
+
+  /* ===== readability demo ===== */
+  var SAMPLES=[
+    "Topical fluoride varnish application at six-monthly intervals confers a statistically significant reduction in caries incidence in the primary dentition, with a pooled preventive fraction of approximately 37% reported across randomised controlled trials in paediatric cohorts.",
+    "Applying fluoride varnish twice a year cuts decay in baby teeth by roughly a third. The evidence comes from randomised trials in children, and the effect holds across risk groups. It takes under a minute per patient at recall.",
+    "A quick fluoride coat on your child's teeth twice a year stops about one in three cavities. It takes less than a minute, it does not hurt, and your child can eat soon after."
+  ];
+  var TICKS=document.querySelectorAll(".ticks b");
+  var lvl=document.getElementById("lvl"), sample=document.getElementById("sample");
+  var scoreEl=document.getElementById("score"), verdict=document.getElementById("verdict"), arc=document.getElementById("arc");
+  var mWps=document.getElementById("mWps"), mSyl=document.getElementById("mSyl"), mGrade=document.getElementById("mGrade");
+
+  function syllables(w){
+    w=w.toLowerCase().replace(/[^a-z]/g,"");
+    if(w.length<=3) return w.length?1:0;
+    w=w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/,"").replace(/^y/,"");
+    var m=w.match(/[aeiouy]{1,2}/g);
+    return m?m.length:1;
+  }
+  function ease(text){
+    var sents=text.split(/[.!?]+/).filter(function(s){return s.trim().length>0;}).length||1;
+    var words=text.split(/\s+/).filter(function(w){return /[a-z]/i.test(w);});
+    var syl=words.reduce(function(a,w){return a+syllables(w);},0);
+    var wps=words.length/sents, spw=syl/words.length;
+    return {score:206.835-1.015*wps-84.6*spw,wps:wps,spw:spw};
+  }
+  function verdictFor(s){
+    if(s<0)  return ["Off the scale","Below zero on Flesch. Fine for a journal, unusable in a waiting room."];
+    if(s<30) return ["Very hard","Postgraduate reading. Most patients will not get past the first line."];
+    if(s<50) return ["Hard","College level. Most patients will skim this and stop."];
+    if(s<60) return ["Fairly hard","Workable for a trained team, still heavy for families."];
+    if(s<70) return ["Plain English","Comfortable for most adults. The target for clinical teams."];
+    if(s<80) return ["Easy","Around a 12–13 year old reading level. Right for parent-facing material."];
+    return ["Very easy","Anyone can read this. Ideal for handouts and consent support."];
+  }
+  function render(){
+    var i=parseInt(lvl.value,10);
+    sample.textContent=SAMPLES[i];
+    var r=ease(SAMPLES[i]), s=Math.max(0,Math.min(100,r.score));
+    scoreEl.textContent=Math.round(r.score);
+    arc.setAttribute("stroke-dashoffset",String(258-258*(s/100)));
+    arc.setAttribute("stroke", s<45?"#8E2C48":(s<68?"#E2718F":"#6FD9BE"));
+    var v=verdictFor(r.score);
+    verdict.textContent=v[1];
+    mWps.textContent=r.wps.toFixed(1);
+    mSyl.textContent=r.spw.toFixed(2);
+    mGrade.textContent=v[0];
+    Array.prototype.forEach.call(TICKS,function(b){b.classList.toggle("on",parseInt(b.getAttribute("data-i"),10)===i);});
+  }
+  lvl.addEventListener("input",render);
+  Array.prototype.forEach.call(TICKS,function(b){
+    b.addEventListener("click",function(){lvl.value=b.getAttribute("data-i");render();});
+  });
+  render();
+
+  /* ===== brief builder ===== */
+  var pick={what:null,who:null,size:null,when:null};
+  var briefText=document.getElementById("briefText"), sendBrief=document.getElementById("sendBrief"), copyBrief=document.getElementById("copyBrief");
+  function slot(v,ph,html){return v?v:(html?'<span class="fill">'+ph+'</span>':ph);}
+  function compose(html){
+    return "Hello Shahnaz — we're looking for "+slot(pick.what,"[what you need]",html)+
+      ", written for "+slot(pick.who,"[who reads it]",html)+
+      ". We're thinking of "+slot(pick.size,"[how much]",html)+
+      ", needed "+slot(pick.when,"[when]",html)+
+      ". Could you send over your scope and rates? Happy to share more detail on a call.";
+  }
+  function refresh(){
+    briefText.innerHTML=compose(true);
+    sendBrief.setAttribute("href","mailto:info@cedarmw.com?subject="+
+      encodeURIComponent("Writing brief for Cedar Science Studio")+"&body="+encodeURIComponent(compose(false)+"\n\n"));
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".q"),function(q){
+    var group=q.getAttribute("data-group");
+    Array.prototype.forEach.call(q.querySelectorAll(".chip"),function(c){
+      c.addEventListener("click",function(){
+        Array.prototype.forEach.call(q.querySelectorAll(".chip"),function(o){o.setAttribute("aria-pressed","false");});
+        c.setAttribute("aria-pressed","true");
+        pick[group]=c.getAttribute("data-v");
+        refresh();
+      });
+    });
+  });
+  copyBrief.addEventListener("click",function(){
+    var t=compose(false), done=function(){copyBrief.textContent="Copied";setTimeout(function(){copyBrief.textContent="Copy text";},1800);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}
+    else{
+      var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();
+      try{document.execCommand("copy");}catch(err){}
+      document.body.removeChild(ta);done();
+    }
+  });
+  refresh();
+})();
+</script>
+</body>
+</html>
