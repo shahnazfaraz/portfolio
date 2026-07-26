@@ -180,7 +180,18 @@ a.card:hover{transform:translateY(-5px) rotate(-.5deg);background:rgba(226,113,1
 #briefText{font-size:1rem;color:var(--enamel);min-height:7.5em;font-weight:300}
 #briefText .fill{color:var(--gum);border-bottom:1px dashed rgba(226,113,143,.5)}
 .brief-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
-.fallback{font-family:var(--mono);font-size:.68rem;line-height:1.8;color:var(--ink-faint);margin:1.1rem 0 0}
+.fields{display:grid;gap:.35rem;margin:1.4rem 0 .2rem}
+.fields label{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gum);margin-top:.5rem}
+.fields input{font-family:var(--body);font-size:1rem;color:var(--enamel);background:rgba(255,255,255,.05);
+  border:1px solid var(--hair);border-radius:12px;padding:.75em .9em;width:100%}
+.fields input::placeholder{color:rgba(252,247,238,.32)}
+.fields input:focus{outline:none;border-color:var(--gum);background:rgba(226,113,143,.1)}
+.fields input:focus-visible{outline:2px solid var(--dentin);outline-offset:2px}
+#fTrap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.status{font-family:var(--mono);font-size:.72rem;line-height:1.7;margin:1rem 0 0;min-height:1.2em}
+.status.ok{color:var(--clinical)}
+.status.bad{color:var(--blush)}
+.fallback{font-family:var(--mono);font-size:.68rem;line-height:1.8;color:var(--ink-faint);margin:1rem 0 0}
 .fallback a{color:var(--gum)}
 
 /* readability demo */
@@ -299,7 +310,7 @@ footer a:hover{color:var(--blush);text-decoration:underline}
       <p class="lede">I'm Shahnaz Faraz, a specialist pediatric dentist of thirteen years and founder of <strong>Cedar Science Studio</strong>. I write patient education, CE and CME material, clinical summaries and product copy — clinically accurate, and genuinely readable.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#brief">Start a brief</a>
-        <a class="btn btn-ghost" href="https://wa.me/966505487051?text=Hi%20Dr.%20Shahnaz%2C%20I%27d%20like%20to%20talk%20about%20a%20medical%20writing%20project." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" href="#work">See my writing</a>
       </div>
       <p class="sig">Riyadh, Saudi Arabia · working remotely worldwide<br>Taking new clients · trial pieces and retainers welcome</p>
     </div>
@@ -450,14 +461,20 @@ footer a:hover{color:var(--blush);text-decoration:underline}
       <div class="brief-out">
         <span class="ttl">Your brief</span>
         <p id="briefText"></p>
+        <div class="fields">
+          <label for="fName">Your name</label>
+          <input type="text" id="fName" name="name" autocomplete="name" placeholder="Jane Okafor">
+          <label for="fMail">Your email</label>
+          <input type="email" id="fMail" name="email" autocomplete="email" placeholder="jane@company.com">
+          <input type="text" id="fTrap" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </div>
         <div class="brief-actions">
-          <a class="btn btn-solid" id="waBrief" href="https://wa.me/966505487051" target="_blank" rel="noopener">Send on WhatsApp</a>
-          <a class="btn btn-ghost" id="sendBrief" href="mailto:info@cedarmw.com">Open in email</a>
+          <button class="btn btn-solid" type="button" id="sendBrief">Send this brief</button>
           <button class="btn btn-ghost" type="button" id="copyBrief">Copy text</button>
         </div>
-        <p class="fallback">No email app on this device? Copy the text and send it to
-          <a href="mailto:info@cedarmw.com">info@cedarmw.com</a>, or use the
-          <a href="https://cedarmw.com/contact/" target="_blank" rel="noopener">contact form</a>.</p>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+        <p class="fallback">Would rather use your own email? Write to
+          <a href="mailto:info@cedarmw.com">info@cedarmw.com</a>.</p>
       </div>
     </div>
   </div>
@@ -605,7 +622,6 @@ footer a:hover{color:var(--blush);text-decoration:underline}
     <p><a class="mail" href="mailto:info@cedarmw.com">info@cedarmw.com</a></p>
     <div class="cta-row" style="justify-content:center">
       <a class="btn btn-solid" href="#brief">Build a brief</a>
-      <a class="btn btn-ghost" href="https://wa.me/966505487051?text=Hi%20Dr.%20Shahnaz%2C%20I%27d%20like%20to%20talk%20about%20a%20medical%20writing%20project." target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-ghost" href="https://cedarmw.com" target="_blank" rel="noopener">cedarmw.com</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/shahnazfaraz/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -760,10 +776,19 @@ footer a:hover{color:var(--blush);text-decoration:underline}
   });
   render();
 
-  /* ===== brief builder ===== */
+  /* ===== brief builder =====
+     -------------------------------------------------------------
+     WHERE THE BRIEF GETS SENT.
+     Briefs post to Formspree, which forwards them to
+     info@cedarmw.com. If Formspree is ever unreachable the button
+     falls back to opening the visitor's email app instead.
+     ------------------------------------------------------------- */
+  var ENDPOINT = "https://formspree.io/f/maqraqpo";
+
   var pick={what:null,who:null,size:null,when:null};
   var briefText=document.getElementById("briefText"), sendBrief=document.getElementById("sendBrief"),
-      copyBrief=document.getElementById("copyBrief"), waBrief=document.getElementById("waBrief");
+      copyBrief=document.getElementById("copyBrief"), statusEl=document.getElementById("status"),
+      fName=document.getElementById("fName"), fMail=document.getElementById("fMail"), fTrap=document.getElementById("fTrap");
   function slot(v,ph,html){return v?v:(html?'<span class="fill">'+ph+'</span>':ph);}
   function compose(html){
     return "Hello Shahnaz — we're looking for "+slot(pick.what,"[what you need]",html)+
@@ -772,13 +797,59 @@ footer a:hover{color:var(--blush);text-decoration:underline}
       ", needed "+slot(pick.when,"[when]",html)+
       ". Could you send over your scope and rates? Happy to share more detail on a call.";
   }
-  function refresh(){
-    var body=compose(false);
-    briefText.innerHTML=compose(true);
-    sendBrief.setAttribute("href","mailto:info@cedarmw.com?subject="+
-      encodeURIComponent("Writing brief for Cedar Science Studio")+"&body="+encodeURIComponent(body+"\n\n"));
-    waBrief.setAttribute("href","https://wa.me/966505487051?text="+encodeURIComponent(body));
+  function refresh(){ briefText.innerHTML=compose(true); }
+
+  function say(msg,cls){ statusEl.textContent=msg; statusEl.className="status"+(cls?" "+cls:""); }
+
+  function mailtoFallback(){
+    var url="mailto:info@cedarmw.com?subject="+encodeURIComponent("Writing brief for Cedar Science Studio")+
+            "&body="+encodeURIComponent(compose(false)+"\n\n");
+    window.location.href=url;
   }
+
+  sendBrief.addEventListener("click",function(){
+    if(fTrap.value){ return; }                       /* bot caught in the honeypot */
+    var name=(fName.value||"").trim(), mail=(fMail.value||"").trim();
+    if(!name){ say("Add your name so I know who I'm replying to.","bad"); fName.focus(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){ say("That email doesn't look right — check it and try again.","bad"); fMail.focus(); return; }
+
+    if(ENDPOINT.indexOf("formspree.io/f/")<0){
+      say("Opening your email app instead — the form isn't connected yet.","bad");
+      mailtoFallback(); return;
+    }
+
+    sendBrief.disabled=true; sendBrief.textContent="Sending";
+    say("Sending your brief…");
+
+    fetch(ENDPOINT,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({
+        name:name,
+        email:mail,
+        _subject:"Writing brief from "+name,
+        brief:compose(false),
+        "What they need":pick.what||"not specified",
+        "Audience":pick.who||"not specified",
+        "Scope":pick.size||"not specified",
+        "Timing":pick.when||"not specified",
+        _gotcha:""
+      })
+    })
+    .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok:r.ok,j:j}; }); })
+    .then(function(res){
+      var good = res.ok && (res.j.success===undefined || res.j.success===true || res.j.success==="true" || res.j.ok===true);
+      if(good){
+        say("Sent. I'll come back to you at "+mail+" with a scope and a price.","ok");
+        sendBrief.textContent="Brief sent";
+      } else { throw new Error("rejected"); }
+    })
+    .catch(function(){
+      say("That didn't go through. Opening your email app instead.","bad");
+      sendBrief.disabled=false; sendBrief.textContent="Send this brief";
+      mailtoFallback();
+    });
+  });
   Array.prototype.forEach.call(document.querySelectorAll(".q"),function(q){
     var group=q.getAttribute("data-group");
     Array.prototype.forEach.call(q.querySelectorAll(".chip"),function(c){
