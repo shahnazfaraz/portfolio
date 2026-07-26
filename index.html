@@ -180,6 +180,8 @@ a.card:hover{transform:translateY(-5px) rotate(-.5deg);background:rgba(226,113,1
 #briefText{font-size:1rem;color:var(--enamel);min-height:7.5em;font-weight:300}
 #briefText .fill{color:var(--gum);border-bottom:1px dashed rgba(226,113,143,.5)}
 .brief-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.fallback{font-family:var(--mono);font-size:.68rem;line-height:1.8;color:var(--ink-faint);margin:1.1rem 0 0}
+.fallback a{color:var(--gum)}
 
 /* readability demo */
 .demo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(20px,3vw,40px);align-items:start}
@@ -256,7 +258,9 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   text-decoration:none;border-bottom:2px dashed rgba(239,217,174,.45)}
 .mail:hover{color:var(--gum);border-color:var(--gum)}
 footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono);font-size:.67rem;
-  letter-spacing:.08em;text-align:center;padding:0 0 2.6rem}
+  letter-spacing:.08em;text-align:center;padding:0 0 2.6rem;line-height:2.2}
+footer a{color:var(--gum);text-decoration:none}
+footer a:hover{color:var(--blush);text-decoration:underline}
 
 @media(max-width:960px){
   .hero .wrap,.builder,.demo,.about-grid{grid-template-columns:1fr}
@@ -295,7 +299,7 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
       <p class="lede">I'm Shahnaz Faraz, a specialist pediatric dentist of thirteen years and founder of <strong>Cedar Science Studio</strong>. I write patient education, CE and CME material, clinical summaries and product copy — clinically accurate, and genuinely readable.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#brief">Start a brief</a>
-        <a class="btn btn-ghost" href="mailto:info@cedarmw.com">info@cedarmw.com</a>
+        <a class="btn btn-ghost" href="https://wa.me/966505487051?text=Hi%20Dr.%20Shahnaz%2C%20I%27d%20like%20to%20talk%20about%20a%20medical%20writing%20project." target="_blank" rel="noopener">WhatsApp</a>
       </div>
       <p class="sig">Riyadh, Saudi Arabia · working remotely worldwide<br>Taking new clients · trial pieces and retainers welcome</p>
     </div>
@@ -447,9 +451,13 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
         <span class="ttl">Your brief</span>
         <p id="briefText"></p>
         <div class="brief-actions">
-          <a class="btn btn-solid" id="sendBrief" href="mailto:info@cedarmw.com">Send this brief</a>
+          <a class="btn btn-solid" id="waBrief" href="https://wa.me/966505487051" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <a class="btn btn-ghost" id="sendBrief" href="mailto:info@cedarmw.com">Open in email</a>
           <button class="btn btn-ghost" type="button" id="copyBrief">Copy text</button>
         </div>
+        <p class="fallback">No email app on this device? Copy the text and send it to
+          <a href="mailto:info@cedarmw.com">info@cedarmw.com</a>, or use the
+          <a href="https://cedarmw.com/contact/" target="_blank" rel="noopener">contact form</a>.</p>
       </div>
     </div>
   </div>
@@ -483,7 +491,8 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
     <div class="sec-head">
       <span class="eyebrow">Published</span>
       <h2>Recent work.</h2>
-      <p>Live on cedarmw.com — samples of both the parent-facing and the clinical register.</p>
+      <p>Live on cedarmw.com — samples of both the parent-facing and the clinical register.
+      <a href="https://cedarmw.com/category/medical-writing/" target="_blank" rel="noopener" style="color:var(--gum)">See the full collection →</a></p>
     </div>
     <div class="cards">
       <a class="card" href="https://cedarmw.com/healthy-mouth-and-neurodivergent-children/" target="_blank" rel="noopener">
@@ -502,6 +511,12 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
         <span class="kind">Evidence review</span>
         <h3>A Fluoride Conversation: What Does the Evidence Say?</h3>
         <p>The fluoride question answered with the evidence, in plain terms.</p>
+        <span class="go">Read on cedarmw.com →</span>
+      </a>
+      <a class="card" href="https://cedarmw.com/the-first-visit-why-age-one-matters/" target="_blank" rel="noopener">
+        <span class="kind">Pediatric dentistry</span>
+        <h3>The First Visit: Why Age One Matters More Than You Think</h3>
+        <p>A child's first appointment isn't about the teeth they have — it's about the decade of habits that follow.</p>
         <span class="go">Read on cedarmw.com →</span>
       </a>
       <div class="card">
@@ -590,13 +605,19 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
     <p><a class="mail" href="mailto:info@cedarmw.com">info@cedarmw.com</a></p>
     <div class="cta-row" style="justify-content:center">
       <a class="btn btn-solid" href="#brief">Build a brief</a>
+      <a class="btn btn-ghost" href="https://wa.me/966505487051?text=Hi%20Dr.%20Shahnaz%2C%20I%27d%20like%20to%20talk%20about%20a%20medical%20writing%20project." target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-ghost" href="https://cedarmw.com" target="_blank" rel="noopener">cedarmw.com</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/shahnazfaraz/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>
 
-<footer>Shahnaz Faraz · Cedar Science Studio · Riyadh, Saudi Arabia · info@cedarmw.com</footer>
+<footer>
+  Shahnaz Faraz · Cedar Science Studio · Riyadh, Saudi Arabia<br>
+  <a href="mailto:info@cedarmw.com">info@cedarmw.com</a> ·
+  <a href="https://cedarmw.com" target="_blank" rel="noopener">cedarmw.com</a> ·
+  <a href="https://www.linkedin.com/in/shahnazfaraz/" target="_blank" rel="noopener">LinkedIn</a>
+</footer>
 
 <script>
 (function(){
@@ -741,7 +762,8 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
 
   /* ===== brief builder ===== */
   var pick={what:null,who:null,size:null,when:null};
-  var briefText=document.getElementById("briefText"), sendBrief=document.getElementById("sendBrief"), copyBrief=document.getElementById("copyBrief");
+  var briefText=document.getElementById("briefText"), sendBrief=document.getElementById("sendBrief"),
+      copyBrief=document.getElementById("copyBrief"), waBrief=document.getElementById("waBrief");
   function slot(v,ph,html){return v?v:(html?'<span class="fill">'+ph+'</span>':ph);}
   function compose(html){
     return "Hello Shahnaz — we're looking for "+slot(pick.what,"[what you need]",html)+
@@ -751,9 +773,11 @@ footer{background:var(--tissue-2);color:var(--ink-faint);font-family:var(--mono)
       ". Could you send over your scope and rates? Happy to share more detail on a call.";
   }
   function refresh(){
+    var body=compose(false);
     briefText.innerHTML=compose(true);
     sendBrief.setAttribute("href","mailto:info@cedarmw.com?subject="+
-      encodeURIComponent("Writing brief for Cedar Science Studio")+"&body="+encodeURIComponent(compose(false)+"\n\n"));
+      encodeURIComponent("Writing brief for Cedar Science Studio")+"&body="+encodeURIComponent(body+"\n\n"));
+    waBrief.setAttribute("href","https://wa.me/966505487051?text="+encodeURIComponent(body));
   }
   Array.prototype.forEach.call(document.querySelectorAll(".q"),function(q){
     var group=q.getAttribute("data-group");
